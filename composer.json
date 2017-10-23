@@ -1,6 +1,6 @@
 {
     "name": "railken/permission",
-    "keywords": ["api"],
+    "keywords": ["php", "library", "permission"],
     "license": "MIT",
     "require": {
         "php": ">=7.0.0"
