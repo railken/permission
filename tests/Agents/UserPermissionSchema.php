@@ -1,8 +1,8 @@
 <?php
 
-namespace Railken\Permission\Test\Agents;
+namespace Railken\Permission\Tests\Agents;
 
-class User
+class UserPermissionSchema
 {
 
 	/**

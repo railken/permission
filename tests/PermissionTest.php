@@ -2,6 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 use Railken\Permission\Tests\User;
+use Railken\Permission\Tests\Agents\UserOwnerPermissionSchema;
+use Railken\Permission\Tests\Agents\UserPermissionSchema;
 
 class PermissionTest extends TestCase
 {
@@ -12,19 +14,19 @@ class PermissionTest extends TestCase
 
         $user = new User();
 
-        $user->setPermissions((new UserOwner())->getPermissions());
+        $user->setPermissions((new UserOwnerPermissionSchema())->getPermissions());
         $this->assertEquals(1, $user->can('profile.attributes.name.show'));
 
-        $user->setPermissions((new UserOwner())->getPermissions());
+        $user->setPermissions((new UserOwnerPermissionSchema())->getPermissions());
         $this->assertEquals(1, $user->can('profile.attributes.name.fill'));
 
-        $user->setPermissions((new User())->getPermissions());
+        $user->setPermissions((new UserPermissionSchema())->getPermissions());
         $this->assertEquals(1, $user->can('profile.attributes.name.show'));
 
-        $user->setPermissions((new User())->getPermissions());
+        $user->setPermissions((new UserPermissionSchema())->getPermissions());
         $this->assertEquals(0, $user->can('profile.attributes.name.fill'));
    
-        $user->setPermissions((new User())->getPermissions());
+        $user->setPermissions((new UserPermissionSchema())->getPermissions());
         $this->assertEquals(1, $user->can('profile.*'));
 
 

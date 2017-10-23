@@ -1,8 +1,8 @@
 <?php
 
-namespace Railken\Permission\Test\Agents;
+namespace Railken\Permission\Tests\Agents;
 
-class UserOwner
+class UserOwnerPermissionSchema
 {
 
 	/**
@@ -22,7 +22,7 @@ class UserOwner
 	 */
 	public function getPermissions()
 	{
-		$user = (new UserAgent());
-		return array_merge($user->getPermission(), $this->permissions);
+		$user = (new UserPermissionSchema());
+		return array_merge($user->getPermissions(), $this->permissions);
 	}
 }
