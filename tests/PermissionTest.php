@@ -7,11 +7,8 @@ use Railken\Permission\Tests\Agents\UserPermissionSchema;
 
 class PermissionTest extends TestCase
 {
-
-
     public function testBasic()
-    {   
-
+    {
         $user = new User();
 
         $user->setPermissions((new UserOwnerPermissionSchema())->getPermissions());
@@ -31,9 +28,5 @@ class PermissionTest extends TestCase
 
         $user->setPermissions((new UserPermissionSchema())->getPermissions());
         $this->assertEquals(0, $user->can('*'));
-
-
     }
 }
-
-

@@ -23,17 +23,16 @@ use Railken\Permission\Traits\CanTrait;
 
 class User
 {
-	use CanTrait;
+    use CanTrait;
 }
 
 ```
 
 Load all permissions using `setPermissions`
 ```php
-
 $user->setPermissions([
-	'me.*',
-	'all.show',
+    'me.*',
+    'all.show',
 ]);
 ```
 Note: You can use `*` as a wildcard.
@@ -42,12 +41,11 @@ Note: You can use `*` as a wildcard.
 Now you're free to test the permission of user
 
 ```php
-
-$user->can('me.anything'); 		// true
-$user->can('foo'); 				// false
-$user->can('all.wrong'); 		// false
-$user->can('all.show'); 		// true
-$user->can('all.show.wrong'); 	// false
+$user->can('me.anything');      // true
+$user->can('foo');              // false
+$user->can('all.wrong');        // false
+$user->can('all.show');         // true
+$user->can('all.show.wrong');   // false
 ```
 
 Check [tests](https://github.com/railken/permission/blob/master/tests/PermissionTest.php) to see more examples;
