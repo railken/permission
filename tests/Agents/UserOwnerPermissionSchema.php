@@ -7,6 +7,8 @@ class UserOwnerPermissionSchema
 
 	/**
 	 * List of all permissions that a user can edit
+	 *
+	 * @var array
 	 */
 	protected $permissions = [
 		'profile.fill',
