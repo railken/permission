@@ -27,7 +27,10 @@ class PermissionTest extends TestCase
         $this->assertEquals(0, $user->can('profile.attributes.name.fill'));
    
         $user->setPermissions((new UserPermissionSchema())->getPermissions());
-        $this->assertEquals(1, $user->can('profile.*'));
+        $this->assertEquals(0, $user->can('profile.*'));
+
+        $user->setPermissions((new UserPermissionSchema())->getPermissions());
+        $this->assertEquals(0, $user->can('*'));
 
 
     }

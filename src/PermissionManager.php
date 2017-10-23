@@ -35,10 +35,6 @@ class PermissionManager
 					break;
 				}
 
-				if ($pp[$k] == "*") {
-					return true;
-				}
-
 				if ($pp[$k] != $in) {
 					break;
 				}
