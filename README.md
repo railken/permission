@@ -16,7 +16,7 @@ composer require railken/permission
 
 ## Usage
 
-Add the trait, check [here](https://github.com/railken/permission/blob/master/src/Traits/CanTrait.php for more info.
+Add the trait, check [here](https://github.com/railken/permission/blob/master/src/Traits/CanTrait.php) for more info.
 
 ```php
 use Railken\Permission\Traits\CanTrait;
